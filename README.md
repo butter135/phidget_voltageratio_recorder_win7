@@ -1,4 +1,4 @@
-# Phidget VoltageRatio Recorder
+# Phidget VoltageRatio Recorder win7
 PhidgetsのVINT Hub（HUB0001）に接続した60 mmスライダーの電圧比（VoltageRatio）を、Windows上で記録するためのシンプルなGUIアプリケーションです。
 
 古い実験用PC（Windows 7 x64）でも利用できるよう、RustとWindows標準のGUI／GDIを使って作成しました。操作に必要な機能を絞り、計測中の値と直近5秒間の波形を確認しながら、CSV形式で保存できます。
@@ -81,4 +81,4 @@ cargo build --release
 
 ![LICENSE: MIT SUSHI-WARE🍣](https://raw.githubusercontent.com/watasuke102/mit-sushi-ware/master/MIT-SUSHI-WARE.svg)
 
-`phidget22.dll`はPhidgets Inc.のソフトウェアであり、このアプリケーションのライセンスの対象外です。 [Phidgets公式のライセンス情報](https://www.phidgets.com/docs/Software_License)を確認してください。
+`phidget22.dll`はPhidgets Inc.のソフトウェアであり、このアプリケーションのライセンスの対象外です。[Phidgets公式のライセンス情報](https://www.phidgets.com/docs/Software_License)を確認してください。
