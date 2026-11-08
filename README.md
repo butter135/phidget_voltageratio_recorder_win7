@@ -32,21 +32,42 @@ Windows 7 x64の実験用環境で動作確認していますが、**Phidgets公
 4. EXEを起動し、記録モードを選択します。通常は`Round`のままで構いません。
 5. **START**で計測を開始し、**STOP**で終了するとCSVが保存されます。
 
-### phidget22.dllの入手方法
+### phidget22.dllの入手・配置方法
 
-このリポジトリとReleasesには、Phidgets製のDLLを同梱していません。利用者自身でPhidgets公式サイトから入手してください。
+`phidget22.dll`は、このアプリを実行するために必要なPhidgets公式ライブラリです。以下の手順で各自入手してください。
 
-1. [Phidgets公式：Windows向けダウンロード](https://www.phidgets.com/docs/OS_-_Windows)を開きます。
-2. **Other Resources → Windows Development Files**からSDKのZIPをダウンロードします。
+1. [Phidgets公式：OS - Windows](https://www.phidgets.com/docs/OS_-_Windows)を開きます。
+2. **Other Resources → Windows Development Files**を選択してZIPをダウンロードします。
    - [Windows Development Files（公式ZIPへの直接リンク）](https://cdn.phidgets.com/downloads/phidget22/libraries/windows/Phidget22-windevel.zip)
-3. ZIPを展開し、**64-bit用の`phidget22.dll`**を探します。`x86`フォルダ内のファイルは32-bit用なので使用しません。
-4. `phidget22.dll`をアプリのEXEと同じディレクトリにコピーしてください。
+3. ダウンロードしたZIPを展開します。
+4. 展開したフォルダの中から、以下の場所にある**64-bit版**`phidget22.dll`を探します。
+
+   **使用したSDK（`1.26.20260821`）での実際のパス：**
+
+   ```text
+   Phidget22-windevel_1.26.20260821\
+   └── phidget22-windevel\
+       └── lib\
+           └── c\
+               └── x64\
+                   └── phidget22.dll
+   ```
+
+   コピー元の相対パスは次のとおりです。
+
+   ```text
+   phidget22-windevel\lib\c\x64\phidget22.dll
+   ```
+
+   ※ SDKのバージョンによって、展開後の最上位フォルダ名は異なる場合があります。`x86`版ではなく、**`x64`フォルダ内のDLL**を使用してください。
+5. 見つけた`phidget22.dll`を、ダウンロードしたアプリの**EXEと同じフォルダ**へコピーします。
+
 
 配置例：
 
 ```text
-PhidgetVoltageRatioRecorder/
-├── <アプリ名>.exe
+phidget_recorder_win7/
+├── phidget_recorder_win7.exe
 └── phidget22.dll
 ```
 
