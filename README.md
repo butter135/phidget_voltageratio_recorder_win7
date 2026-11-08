@@ -1,5 +1,7 @@
 # Phidget VoltageRatio Recorder win7
-PhidgetsのVINT Hub（HUB0001）に接続した60 mmスライダーの電圧比（VoltageRatio）を、Windows上で記録するためのシンプルなGUIアプリケーションです。
+![動作画面](docs/screenshot.png)
+
+PhidgetsのVINT Hub（HUB0001）に接続したスライダーの電圧比（VoltageRatio）を、Windows上で記録するためのシンプルなGUIアプリケーションです。
 
 古い実験用PC（Windows 7 x64）でも利用できるよう、RustとWindows標準のGUI／GDIを使って作成しました。操作に必要な機能を絞り、計測中の値と直近5秒間の波形を確認しながら、CSV形式で保存できます。
 
